@@ -3,17 +3,8 @@ class Solution {
 
         s = s.trim();
         String words[] = s.split("\\s+");
-
-        int left = 0;
-        int right = words.length - 1;
-        while (left < right) {
-            String temp = words[left];
-            words[left] = words[right];
-            words[right] = temp;
-            left++;
-            right--;
-        }
-
-        return String.join(" ", words);
+        List<String> wordList = Arrays.asList(words);
+       Collections.reverse(wordList);
+        return String.join(" ", wordList);
     }
 }
