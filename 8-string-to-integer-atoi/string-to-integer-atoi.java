@@ -11,7 +11,7 @@ class Solution {
             i++;
         }
         while (i < n && Character.isDigit(s.charAt(i))) {
-            num = num * 10 + (s.charAt(i) - '0');
+            num = num * 10 + (s.charAt(i) - '0'); //this line is also handling the leading zeroes.
 
             if (sign == 1 && num > Integer.MAX_VALUE) return Integer.MAX_VALUE;
             if (sign == -1 && -num < Integer.MIN_VALUE) return Integer.MIN_VALUE;
