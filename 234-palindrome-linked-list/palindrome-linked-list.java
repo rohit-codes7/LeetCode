@@ -12,7 +12,7 @@ class Solution {
         int right = arr.size() - 1;
 
         while (left < right) {
-            if (arr.get(left)!=(arr.get(right))) {
+            if (!arr.get(left).equals(arr.get(right))) {
                 return false;
             }
             left++;
